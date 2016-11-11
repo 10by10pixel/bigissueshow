@@ -27,7 +27,8 @@
    </div>
    <div class="btn-group" role="group">
      {% assign episodeNum = 1 %}
-     {% for episode in site.data.episodes %}
+     {% increment episodeNum %}
+     {% for episodeData in site.data.episodes %} {% assign episode = episodeData[1] %}
      <a class="btn btn-default" href="{{ episode.link }}" role="button" alt="{{ episode.description }}">Episode {% increment episodeNum %}: {{ episode.name }}</a>
      {% endfor %}
   </div>
