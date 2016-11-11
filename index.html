@@ -26,7 +26,7 @@
      <h1>Big Issues</h1>
    </div>
    <div class="btn-group" role="group"> {% assign episodeNum = 0 %}{% for episodeData in site.data.episodes %} {% assign episode = episodeData[1] %}{% assign episodeNum = episodeNum | plus:1 %}
-     <a class="btn btn-default" href="{{ episode.link }}" role="button" alt="{{ episode.description }}">Episode {{ episodeNum }}: {{ episode.name }}</a>{% endfor %}
+     <a class="btn btn-default" href="{{ episode.link }}" role="button" title="{{ episode.description }}">Episode {{ episodeNum }}: {{ episode.name }}</a>{% endfor %}
   </div>
  </body>
 </html>
